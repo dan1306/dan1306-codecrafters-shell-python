@@ -1,8 +1,24 @@
 import sys
 import os
 
-def find_executable_path():
-    print (os.get_exec_path())
+def find_executable_path(cmd):
+    # here we are getting the PATH environment variable:
+    # which contains a list of directories that the operating system searches when executing a cmd. Retrieving its value 
+    # allows us to locate executables or scripts easily.
+    # we default to an empty string "" if the path is not set
+    # splits the string at each colon : (on Unix-like systems).
+    # This results in the list: ["/usr/bin", "/usr/local/bin", "/bin"].
+    path_env =  os.environ.get("PATH", "").splitsplit(os.pathsep)
+
+    # Iterate through each directory in PATH
+    for d in path_env:
+        # Join the cmd to the directory path
+        full_path = os.path.join(directory, cmd)
+        # Check if the file exists and is executable
+        if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
+            return full_path
+    return(None)
+
 
 def split_with_spaces(input_string):
     result = []
@@ -26,8 +42,6 @@ def main():
     # Uncomment this block to pass the first stage
     # sys.stdout.write("$ ")
     # sys.stdout.flush()
-    for i in range(50):
-        print(find_executable_path())
     while True:
         sys.stdout.write("$ ")
         sys.stdout.flush()
@@ -50,6 +64,12 @@ def main():
                 print("nonexistentcommand not found")
             elif(user_input_for_echo[2] == "cat"):
                 print("cat is /bin/cat")
+            else:
+                executable_or_not = find_executable_path(user_input_for_echo[2])
+                if(executable_or_not):
+                    print(f"{user_input_for_echo[2]} is {executable_or_not}")
+                else:
+                    print(f"{user_input_for_echo[2]}: command not found")
         else:
             if(user_Input == "exit 0"):
                 sys.exit(0)
