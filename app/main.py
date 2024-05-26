@@ -11,7 +11,8 @@ def main():
     # uncommented code
 
     # Wait for user input
-    input()
+    userInput = input("waiting for user input: ")
+    
 
 
 if __name__ == "__main__":
