@@ -13,9 +13,12 @@ def main():
         sys.stdout.flush()
 
         # Wait for user input
-        
         user_Input = input()
-        print(f"{user_Input}: command not found")
+
+        if(user_Input == "exit 0"):
+            sys.exit(0)
+        else:
+            print(f"{user_Input}: command not found")
 
 
 if __name__ == "__main__":
