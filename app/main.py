@@ -35,7 +35,7 @@ def main():
 
         if(user_Input == "exit 0"):
             sys.exit(0)
-        elif(user_Input[0] == "echo"):
+        elif(user_input_for_echo[0] == "echo"):
             print_this_out = "".join(user_input_for_echo[1:])
             print(print_this_out)
         else:
