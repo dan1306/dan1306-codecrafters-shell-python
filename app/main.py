@@ -8,6 +8,7 @@ def main():
     # Uncomment this block to pass the first stage
     sys.stdout.write("$ ")
     sys.stdout.flush()
+    # uncommented code
 
     # Wait for user input
     input()
