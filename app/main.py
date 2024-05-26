@@ -8,14 +8,13 @@ def main():
     # Uncomment this block to pass the first stage
     # sys.stdout.write("$ ")
     # sys.stdout.flush()
-
-    sys.stdout.write("$ ")
     while True:
+        sys.stdout.write("$ ")
         sys.stdout.flush()
 
         # Wait for user input
         
-        user_Input = input("$ ")
+        user_Input = input()
         print(f"{user_Input}: command not found")
 
 
