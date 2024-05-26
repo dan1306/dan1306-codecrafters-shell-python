@@ -1,5 +1,19 @@
 import sys
 
+def split_with_spaces(input_string):
+    result = []
+    word = ''
+    for char in input_string:
+        if char == ' ':
+            if word:
+                result.append(word)
+                word = ''
+            result.append(' ')
+        else:
+            word += char
+    if word:
+        result.append(word)
+    return result
 
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
@@ -15,15 +29,14 @@ def main():
         # Wait for user input
         user_Input = input()
 
-        for i in range(50):
-            print(user_Input[0])
+        user_input_for_echo = split_with_spaces(user_Input)
+
+
 
         if(user_Input == "exit 0"):
             sys.exit(0)
         elif(user_Input[0] == "echo"):
-            print_this_out = ""
-            for i in range(1, len(user_Input)):
-                print_this_out+= i
+            print_this_out = "".join(user_input_for_echo[1:])
             print(print_this_out)
         else:
             print(f"{user_Input}: command not found")
