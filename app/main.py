@@ -13,7 +13,7 @@ def find_executable_path(cmd):
     # Iterate through each directory in PATH
     for d in path_env:
         # Join the cmd to the directory path
-        full_path = os.path.join(directory, cmd)
+        full_path = os.path.join(d, cmd)
         # Check if the file exists and is executable
         if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
             return full_path
