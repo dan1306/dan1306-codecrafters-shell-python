@@ -12,7 +12,7 @@ def main():
     sys.stdout.flush()
 
     # Wait for user input
-    input()
+    user_Input = input()
 
 
 if __name__ == "__main__":
