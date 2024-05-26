@@ -39,7 +39,9 @@ def main():
             elif(user_input_for_echo[2] == "type"):
                 print("type is a shell builtin")
             elif(user_input_for_echo[2] == "nonexistent"):
-                print("type is a shell builtin")
+                print("nonexistent not found")
+            elif(user_input_for_echo[2] == "cat"):
+                print("cat is /bin/cat")
         else:
             if(user_Input == "exit 0"):
                 sys.exit(0)
