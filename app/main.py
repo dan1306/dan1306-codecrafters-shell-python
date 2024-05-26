@@ -21,6 +21,7 @@ def main():
             print_this_out = ""
             for i in range(1, len(user_Input)):
                 print_this_out+= i
+            print(print_this_out)
         else:
             print(f"{user_Input}: command not found")
 
