@@ -8,7 +8,7 @@ def find_executable_path(cmd):
     # we default to an empty string "" if the path is not set
     # splits the string at each colon : (on Unix-like systems).
     # This results in the list: ["/usr/bin", "/usr/local/bin", "/bin"].
-    path_env =  os.environ.get("PATH", "").splitsplit(os.pathsep)
+    path_env =  os.environ.get("PATH", "").split(os.pathsep)
 
     # Iterate through each directory in PATH
     for d in path_env:
