@@ -13,7 +13,7 @@ def main():
 
     # Wait for user input
     while True:
-        user_Input = input()
+        user_Input = input("$ ")
         print(f"{user_Input}: command not found")
 
 
