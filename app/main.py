@@ -15,6 +15,9 @@ def main():
         # Wait for user input
         user_Input = input()
 
+        for i in range(50):
+            print(user_Input[0])
+
         if(user_Input == "exit 0"):
             sys.exit(0)
         elif(user_Input[0] == "echo"):
