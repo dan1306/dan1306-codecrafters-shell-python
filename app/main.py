@@ -1,4 +1,8 @@
 import sys
+import os
+
+def find_executable_path():
+    print (os.get_exec_path())
 
 def split_with_spaces(input_string):
     result = []
@@ -22,6 +26,8 @@ def main():
     # Uncomment this block to pass the first stage
     # sys.stdout.write("$ ")
     # sys.stdout.flush()
+    for i in range(50):
+        print(find_executable_path())
     while True:
         sys.stdout.write("$ ")
         sys.stdout.flush()
