@@ -8,8 +8,9 @@ def main():
     # Uncomment this block to pass the first stage
     # sys.stdout.write("$ ")
     # sys.stdout.flush()
+
+    sys.stdout.write("$ ")
     while True:
-        sys.stdout.write("$ ")
         sys.stdout.flush()
 
         # Wait for user input
