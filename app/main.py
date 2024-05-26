@@ -17,6 +17,10 @@ def main():
 
         if(user_Input == "exit 0"):
             sys.exit(0)
+        elif(user_Input[0] == "echo"):
+            print_this_out = ""
+            for i in range(1, len(user_Input)):
+                print_this_out+= i
         else:
             print(f"{user_Input}: command not found")
 
