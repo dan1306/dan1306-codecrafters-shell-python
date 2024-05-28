@@ -75,7 +75,7 @@ def main():
 
         user_input_for_echo = split_with_spaces(user_Input)
 
-        print(user_input_for_echo)
+        # print(user_input_for_echo)
 
         if(user_input_for_echo[0] == "type"):
             if(user_input_for_echo[2] == "echo"):
@@ -98,9 +98,7 @@ def main():
                     print(f"{user_input_for_echo[2]}: command not found")
         elif len(user_input_for_echo) == 3:
             print(execute_path(user_input_for_echo))
-
         else:
-
             if(user_input_for_echo[0] == "exit" and user_input_for_echo[2] == "0"):
                 sys.exit(0)
             elif(user_input_for_echo[0] == "echo"):
