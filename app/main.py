@@ -74,7 +74,10 @@ def main():
         user_Input = input()
 
         user_input_for_echo = split_with_spaces(user_Input)
-        
+
+        for i in range(50):
+            print("nothing is found")
+
         if(user_input_for_echo[0] == "type"):
             if(user_input_for_echo[2] == "echo"):
                 print("echo is a shell builtin")
@@ -98,8 +101,7 @@ def main():
             print(execute_path(user_input_for_echo))
 
         else:
-            for i in range(50):
-                    print("nothing is found")
+
             if(user_input_for_echo[0] == "exit" and user_input_for_echo[2] == "0"):
                 sys.exit(0)
             elif(user_input_for_echo[0] == "echo"):
