@@ -40,7 +40,7 @@ def execute_path(path_and_args):
             # print
             result = subprocess.run([full_path] + [path_and_args[2]], check=True, text=True, capture_output=True)
             # except as e:
-            print(result.stdout)
+            return(result.stdout)
 
     return("")
 
