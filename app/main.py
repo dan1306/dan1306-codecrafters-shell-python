@@ -75,8 +75,7 @@ def main():
 
         user_input_for_echo = split_with_spaces(user_Input)
 
-        for i in range(50):
-            print("nothing is found")
+        print(user_input_for_echo)
 
         if(user_input_for_echo[0] == "type"):
             if(user_input_for_echo[2] == "echo"):
