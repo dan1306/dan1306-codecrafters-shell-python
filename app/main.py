@@ -42,8 +42,7 @@ def execute_path(path_and_args):
             # except as e:
             return(result.stdout)
 
-    return(" ")
-
+    return(f"{path_and_args[0]}: command not found")
 
 def split_with_spaces(input_string):
     result = []
