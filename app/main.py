@@ -29,7 +29,7 @@ def execute_path(path_and_args):
     # splits the string at each colon : (on Unix-like systems).
     # This results in the list: ["/usr/bin", "/usr/local/bin", "/bin"].
     path_env =  os.environ.get("PATH", "").split(os.pathsep)
-
+    found = False
     # Iterate through each directory in PATH
     for d in path_env:
         # Join the cmd to the directory path
@@ -42,9 +42,10 @@ def execute_path(path_and_args):
             # except as e:
             sys.stdout.write(result.stdout)
             sys.stdout.flush()
-
-    sys.stdout.write(f"{path_and_args[0]}: command not found")
-    sys.stdout.flush()
+            found = True
+    if(found == False):
+        sys.stdout.write(f"{path_and_args[0]}: command not found")
+        sys.stdout.flush()
 
 
 def split_with_spaces(input_string):
