@@ -43,6 +43,7 @@ def execute_path(path_and_args):
             sys.stdout.write(result.stdout)
             sys.stdout.flush()
             found = True
+            break
     if(found == False):
         sys.stdout.write(f"{path_and_args[0]}: command not found")
         sys.stdout.flush()
