@@ -42,7 +42,7 @@ def execute_path(path_and_args):
             # except as e:
             print(result.stdout)
 
-    return(None)
+    return("")
 
 
 def split_with_spaces(input_string):
