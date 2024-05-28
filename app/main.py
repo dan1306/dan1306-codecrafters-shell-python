@@ -104,7 +104,7 @@ def main():
         elif len(user_input_for_echo) == 3:
             execute_path(user_input_for_echo)
         else:
-            if(user_input_for_echo[0] == "exit" and user_input_for_echo[2] == "0"):
+            if(user_input_for_echo == "exit 0"):
                 sys.exit(0)
             elif(user_input_for_echo[0] == "echo"):
                 print_this_out = "".join(user_input_for_echo[1:])
