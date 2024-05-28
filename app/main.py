@@ -98,7 +98,9 @@ def main():
             print(execute_path(user_input_for_echo))
 
         else:
-            if(user_input_for_echo[0] == "exit"):
+            for i in range(50):
+                    print("nothing is found")
+            if(user_input_for_echo[0] == "exit" and user_input_for_echo[2] == "0"):
                 sys.exit(0)
             elif(user_input_for_echo[0] == "echo"):
                 print_this_out = "".join(user_input_for_echo[1:])
