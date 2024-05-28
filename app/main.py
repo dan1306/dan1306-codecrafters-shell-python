@@ -82,6 +82,9 @@ def main():
 
         # print(user_input_for_echo)
 
+        if(user_Input == "exit 0"):
+                sys.exit(0)
+
         if(user_input_for_echo[0] == "type"):
             if(user_input_for_echo[2] == "echo"):
                 print("echo is a shell builtin")
