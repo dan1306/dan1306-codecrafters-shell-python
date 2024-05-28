@@ -40,9 +40,9 @@ def execute_path(path_and_args):
             # print
             result = subprocess.run([full_path] + [path_and_args[2]], check=True, text=True, capture_output=True)
             # except as e:
-            return(result.stdout)
+            sys.stderr.write(result.stdout)
 
-    return(f"{path_and_args[0]}: command not found")
+    sys.stderr.write(f"{path_and_args[0]}: command not found")
 
 def split_with_spaces(input_string):
     result = []
@@ -97,7 +97,7 @@ def main():
                 else:
                     print(f"{user_input_for_echo[2]}: command not found")
         elif len(user_input_for_echo) == 3:
-            print(execute_path(user_input_for_echo))
+            execute_path(user_input_for_echo)
         else:
             if(user_input_for_echo[0] == "exit" and user_input_for_echo[2] == "0"):
                 sys.exit(0)
