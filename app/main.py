@@ -37,7 +37,7 @@ def execute_path(path_and_args):
         # Check if the file exists and is executable
         if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
             # try:
-            result = subprocess.run([full_path] + path_and_args[2], check=True, text=True, capture_output=True)
+            result = subprocess.run([full_path] + [path_and_args[2]], check=True, text=True, capture_output=True)
             # except as e:
             return(result.stdout)
 
