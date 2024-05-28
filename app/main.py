@@ -41,8 +41,11 @@ def execute_path(path_and_args):
             result = subprocess.run([full_path] + [path_and_args[2]], check=True, text=True, capture_output=True)
             # except as e:
             sys.stdout.write(result.stdout)
+            sys.stdout.flush()
 
     sys.stdout.write(f"{path_and_args[0]}: command not found")
+    sys.stdout.flush()
+
 
 def split_with_spaces(input_string):
     result = []
