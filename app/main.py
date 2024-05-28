@@ -110,6 +110,8 @@ def main():
                 print_this_out = "".join(user_input_for_echo[1:])
                 print(print_this_out)
             else:
+                for i in range(50):
+                    print(user_Input)
                     # print("nothing is found")
                 print(f"{user_input_for_echo[0]}: command not found")
 
