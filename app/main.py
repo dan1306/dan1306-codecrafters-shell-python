@@ -22,7 +22,7 @@ def find_executable_path(cmd):
     return(None)
 
 def execute_path(path_and_args):
-        # here we are getting the PATH environment variable:
+    # here we are getting the PATH environment variable:
     # which contains a list of directories that the operating system searches when executing a cmd. Retrieving its value 
     # allows us to locate executables or scripts easily.
     # we default to an empty string "" if the path is not set
@@ -84,8 +84,7 @@ def main():
 
         if(user_Input == "exit 0"):
                 sys.exit(0)
-
-        if(user_input_for_echo[0] == "type"):
+        elif(user_input_for_echo[0] == "type"):
             if(user_input_for_echo[2] == "echo"):
                 print("echo is a shell builtin")
             elif(user_input_for_echo[2] == "exit"):
@@ -107,15 +106,10 @@ def main():
         elif len(user_input_for_echo) == 3:
             execute_path(user_input_for_echo)
         else:
-            if(user_Input == "exit 0"):
-                sys.exit(0)
-            elif(user_input_for_echo[0] == "echo"):
+            if(user_input_for_echo[0] == "echo"):
                 print_this_out = "".join(user_input_for_echo[1:])
                 print(print_this_out)
             else:
-                for i in range(50):
-                    print(user_Input)
-                    # print("nothing is found")
                 print(f"{user_input_for_echo[0]}: command not found")
 
 
