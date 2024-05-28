@@ -98,7 +98,7 @@ def main():
             print(execute_path(user_input_for_echo))
 
         else:
-            if(user_Input == "exit 0"):
+            if(user_input_for_echo[0] == "exit"):
                 sys.exit(0)
             elif(user_input_for_echo[0] == "echo"):
                 print_this_out = "".join(user_input_for_echo[1:])
