@@ -104,7 +104,7 @@ def main():
                 print_this_out = "".join(user_input_for_echo[1:])
                 print(print_this_out)
             else:
-                print(f"{user_Input}: command not found")
+                print(f"{user_input_for_echo[0]}: command not found")
 
 
 if __name__ == "__main__":
